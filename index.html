@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>WebSipp | Website Profesional. Cepat Jadi. Gratis Hosting Seumur Hidup</title>
+    <title>WebSipp | Website Profesional. Cepat Jadi. Hosting Gratis Seumur Hidup</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -88,15 +88,6 @@
             --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
             --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
             --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
-            
-            /* Z-index */
-            --z-dropdown: 100;
-            --z-sticky: 200;
-            --z-fixed: 300;
-            --z-modal: 400;
-            --z-popover: 500;
-            --z-tooltip: 600;
-            --z-floating: 700;
         }
 
         /* Reset & Base Styles */
@@ -109,18 +100,15 @@
         html {
             scroll-behavior: smooth;
             font-size: 16px;
-            -webkit-text-size-adjust: 100%;
         }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             color: var(--gray-700);
             background-color: white;
-            line-height: 1.5;
+            line-height: 1.6;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            width: 100%;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -158,35 +146,33 @@
             background: none;
         }
 
+        /* Container */
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
             padding: 0 var(--space-4);
         }
 
+        /* Section */
         .section {
             padding: var(--space-12) 0;
-            position: relative;
-            width: 100%;
         }
 
         .section-header {
             text-align: center;
             margin-bottom: var(--space-8);
-            padding: 0 var(--space-4);
         }
 
         .section-title {
-            font-size: 1.75rem;
+            font-size: 2rem;
             margin-bottom: var(--space-3);
             background: var(--gradient-primary);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             background-clip: text;
+            color: transparent;
             position: relative;
             display: inline-block;
-            line-height: 1.3;
         }
 
         .section-title::after {
@@ -202,24 +188,12 @@
         }
 
         .section-subtitle {
-            font-size: 0.9375rem;
+            font-size: 1rem;
             color: var(--gray-600);
             max-width: 600px;
             margin: 0 auto;
             line-height: 1.6;
         }
-
-        /* Typography Scale */
-        .text-xs { font-size: 0.75rem; }
-        .text-sm { font-size: 0.875rem; }
-        .text-base { font-size: 1rem; }
-        .text-lg { font-size: 1.125rem; }
-        .text-xl { font-size: 1.25rem; }
-        .text-2xl { font-size: 1.5rem; }
-        .text-3xl { font-size: 1.875rem; }
-        .text-4xl { font-size: 2.25rem; }
-        .text-5xl { font-size: 3rem; }
-        .text-6xl { font-size: 3.75rem; }
 
         /* Buttons */
         .btn {
@@ -232,30 +206,10 @@
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
             font-size: 0.9375rem;
-            border: none;
+            border: 2px solid transparent;
             cursor: pointer;
             transition: var(--transition-base);
-            position: relative;
-            overflow: hidden;
             white-space: nowrap;
-            min-height: 44px;
-            width: 100%;
-            max-width: 100%;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: var(--transition-base);
-        }
-
-        .btn:hover::before {
-            left: 100%;
         }
 
         .btn-primary {
@@ -272,7 +226,7 @@
         .btn-secondary {
             background: transparent;
             color: var(--primary-600);
-            border: 2px solid var(--primary-600);
+            border-color: var(--primary-600);
         }
 
         .btn-secondary:hover {
@@ -302,7 +256,6 @@
         .btn-whatsapp:hover {
             background: #128C7E;
             transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(37, 211, 102, 0.2);
         }
 
         .btn-lg {
@@ -324,17 +277,7 @@
             height: 100%;
             position: relative;
             overflow: hidden;
-            width: 100%;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: var(--gradient-primary);
+            border: 1px solid var(--gray-100);
         }
 
         .card:hover {
@@ -352,7 +295,6 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            white-space: nowrap;
         }
 
         .badge-primary {
@@ -365,22 +307,7 @@
             color: white;
         }
 
-        .badge-warning {
-            background: var(--warning);
-            color: white;
-        }
-
-        .badge-error {
-            background: var(--error);
-            color: white;
-        }
-
-        .badge-info {
-            background: var(--info);
-            color: white;
-        }
-
-        /* Promo Banner */
+        /* ===== PROMO BANNER ===== */
         .promo-banner {
             background: var(--gradient-primary);
             color: white;
@@ -390,32 +317,9 @@
             font-weight: 600;
             position: relative;
             overflow: hidden;
-            line-height: 1.4;
-            width: 100%;
         }
 
-        .promo-banner span {
-            position: relative;
-            z-index: 1;
-        }
-
-        .promo-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(255,255,255,0.1) 10px,
-                rgba(255,255,255,0.1) 20px
-            );
-        }
-
-        /* ===== HEADER & NAVIGATION ===== */
+        /* ===== HEADER ===== */
         .header {
             position: fixed;
             top: 0;
@@ -423,12 +327,10 @@
             width: 100%;
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            z-index: var(--z-fixed);
+            border-bottom: 1px solid var(--gray-200);
+            z-index: 1000;
             padding: var(--space-3) 0;
             transition: var(--transition-base);
-            box-shadow: var(--shadow-sm);
         }
 
         .header.scrolled {
@@ -440,14 +342,11 @@
             justify-content: space-between;
             align-items: center;
             gap: var(--space-4);
-            width: 100%;
         }
 
         .logo {
             display: flex;
             flex-direction: column;
-            position: relative;
-            z-index: var(--z-fixed);
         }
 
         .logo-main {
@@ -456,8 +355,8 @@
             font-weight: 900;
             background: var(--gradient-primary);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             background-clip: text;
+            color: transparent;
             line-height: 1;
         }
 
@@ -487,7 +386,7 @@
             padding: var(--space-4);
             box-shadow: var(--shadow-lg);
             border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-            z-index: var(--z-dropdown);
+            z-index: 999;
         }
 
         .nav-links.active {
@@ -502,7 +401,6 @@
             border-radius: var(--radius-md);
             transition: var(--transition-base);
             display: block;
-            width: 100%;
         }
 
         .nav-link:hover {
@@ -515,11 +413,6 @@
             background: var(--primary-50);
         }
 
-        /* Header Social Icons - Desktop Only */
-        .header-social-icons {
-            display: none;
-        }
-
         .nav-cta {
             display: none;
         }
@@ -530,43 +423,19 @@
             justify-content: center;
             width: 44px;
             height: 44px;
-            background: none;
-            border: none;
-            font-size: 1.25rem;
-            color: var(--gray-700);
-            cursor: pointer;
-            border-radius: var(--radius-md);
-            transition: var(--transition-base);
-            z-index: var(--z-fixed);
-        }
-
-        .mobile-menu-btn:hover {
             background: var(--gray-100);
-        }
-
-        .mobile-menu-btn i {
-            transition: var(--transition-base);
+            border-radius: var(--radius-md);
+            color: var(--gray-700);
+            font-size: 1.25rem;
         }
 
         /* ===== HERO SECTION ===== */
         .hero {
             padding-top: 6rem;
             padding-bottom: var(--space-12);
+            background: var(--gradient-subtle);
             position: relative;
             overflow: hidden;
-            background: var(--gradient-subtle);
-            width: 100%;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.03) 0%, rgba(217, 70, 239, 0.03) 100%);
-            z-index: 0;
         }
 
         .hero-content {
@@ -574,10 +443,7 @@
             flex-direction: column;
             gap: var(--space-8);
             align-items: center;
-            position: relative;
-            z-index: 1;
             text-align: center;
-            width: 100%;
         }
 
         .hero-text {
@@ -597,20 +463,17 @@
         }
 
         .hero-title {
-            font-size: 1.75rem;
+            font-size: 2rem;
             line-height: 1.3;
             margin-bottom: var(--space-4);
             background: var(--gradient-primary);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             background-clip: text;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            hyphens: auto;
+            color: transparent;
         }
 
         .hero-subtitle {
-            font-size: 1rem;
+            font-size: 1.125rem;
             color: var(--gray-600);
             margin-bottom: var(--space-6);
             line-height: 1.6;
@@ -623,10 +486,6 @@
             width: 100%;
             max-width: 400px;
             margin: 0 auto var(--space-6);
-        }
-
-        .hero-actions .btn {
-            width: 100%;
         }
 
         .hero-highlights {
@@ -650,31 +509,21 @@
         }
 
         .highlight-text {
-            font-size: 0.75rem;
+            font-size: 0.875rem;
             color: var(--gray-600);
             font-weight: 500;
             line-height: 1.4;
         }
 
         /* ===== FEATURES SECTION ===== */
-        .features {
-            background: white;
-        }
-
         .features-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: var(--space-6);
-            width: 100%;
         }
 
         .feature-card {
-            padding: var(--space-6);
             text-align: center;
-            border: 1px solid var(--gray-200);
-            background: white;
-            border-radius: var(--radius-lg);
-            width: 100%;
         }
 
         .feature-icon-wrapper {
@@ -689,11 +538,6 @@
             color: white;
             font-size: 1.5rem;
             box-shadow: var(--shadow-md);
-            transition: var(--transition-base);
-        }
-
-        .feature-card:hover .feature-icon-wrapper {
-            transform: scale(1.05);
         }
 
         .feature-card h3 {
@@ -711,9 +555,6 @@
         .trust-badges {
             background: var(--gray-50);
             padding: var(--space-6) 0;
-            margin-top: var(--space-4);
-            width: 100%;
-            overflow: hidden;
         }
 
         .trust-badges-container {
@@ -724,9 +565,6 @@
             overflow-x: auto;
             padding: var(--space-2) var(--space-4);
             scrollbar-width: none;
-            -ms-overflow-style: none;
-            width: 100%;
-            -webkit-overflow-scrolling: touch;
         }
 
         .trust-badges-container::-webkit-scrollbar {
@@ -754,19 +592,12 @@
             justify-content: center;
             color: white;
             font-size: 1rem;
-            margin-bottom: var(--space-1);
         }
 
         .trust-label {
             font-size: 0.75rem;
             font-weight: 600;
             color: var(--gray-700);
-            white-space: nowrap;
-        }
-
-        .trust-subtitle {
-            font-size: 0.6875rem;
-            color: var(--gray-500);
             white-space: nowrap;
         }
 
@@ -779,27 +610,10 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: var(--space-6);
-            width: 100%;
         }
 
         .portfolio-card {
-            padding: var(--space-6);
             text-align: center;
-            position: relative;
-            overflow: hidden;
-            background: white;
-            border-radius: var(--radius-lg);
-            width: 100%;
-        }
-
-        .portfolio-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: var(--gradient-primary);
         }
 
         .portfolio-icon {
@@ -807,14 +621,8 @@
             margin-bottom: var(--space-4);
             background: var(--gradient-primary);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             background-clip: text;
-            display: inline-block;
-            transition: var(--transition-base);
-        }
-
-        .portfolio-card:hover .portfolio-icon {
-            transform: scale(1.05);
+            color: transparent;
         }
 
         .portfolio-card h3 {
@@ -829,12 +637,6 @@
             font-size: 0.9375rem;
         }
 
-        .portfolio-card .btn {
-            min-width: 140px;
-            margin: 0 auto;
-        }
-
-        /* Client Portfolio Styles */
         .client-portfolio {
             margin-top: var(--space-4);
             padding: var(--space-4);
@@ -854,11 +656,6 @@
             gap: var(--space-2);
         }
 
-        .portfolio-title i {
-            color: var(--primary-500);
-            font-size: 0.75rem;
-        }
-
         .portfolio-list {
             display: grid;
             gap: var(--space-2);
@@ -868,7 +665,6 @@
             display: flex;
             align-items: center;
             gap: var(--space-2);
-            padding: var(--space-1) 0;
         }
 
         .portfolio-link {
@@ -882,7 +678,6 @@
             border-radius: var(--radius-sm);
             width: 100%;
             text-align: left;
-            word-break: break-word;
         }
 
         .portfolio-link:hover {
@@ -890,13 +685,6 @@
             background: rgba(99, 102, 241, 0.05);
         }
 
-        .portfolio-link i {
-            font-size: 0.6875rem;
-            opacity: 0.7;
-            flex-shrink: 0;
-        }
-
-        /* Demo Explanation Text */
         .demo-explanation {
             text-align: center;
             margin-bottom: var(--space-6);
@@ -904,7 +692,6 @@
             background: linear-gradient(to right, rgba(99, 102, 241, 0.03), rgba(217, 70, 239, 0.03));
             border-radius: var(--radius-md);
             border-left: 3px solid var(--primary-500);
-            width: 100%;
         }
 
         .demo-explanation p {
@@ -916,37 +703,17 @@
         }
 
         /* ===== PRICING SECTION ===== */
-        .pricing {
-            background: white;
-        }
-
         .pricing-container {
             display: grid;
             grid-template-columns: 1fr;
             gap: var(--space-6);
             margin-bottom: var(--space-8);
-            width: 100%;
         }
 
         .pricing-card {
             padding: var(--space-6);
             position: relative;
             height: 100%;
-            transition: all 0.3s ease;
-            background: white;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-md);
-            width: 100%;
-        }
-
-        .pricing-badge {
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            padding: var(--space-1) var(--space-4);
-            font-size: 0.75rem;
         }
 
         .limited-spot-badge {
@@ -959,7 +726,6 @@
             border-radius: var(--radius-sm);
             font-size: 0.75rem;
             font-weight: 700;
-            z-index: 1;
             animation: pulse 2s infinite;
         }
 
@@ -994,7 +760,6 @@
             justify-content: center;
             margin-bottom: var(--space-4);
             gap: var(--space-2);
-            width: 100%;
         }
 
         .price-normal-full {
@@ -1009,8 +774,8 @@
             line-height: 1;
             background: var(--gradient-primary);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             background-clip: text;
+            color: transparent;
         }
 
         .price-desc {
@@ -1021,14 +786,12 @@
             padding: var(--space-3);
             background: var(--gray-50);
             border-radius: var(--radius-md);
-            width: 100%;
         }
 
         .features-list {
             display: grid;
             gap: var(--space-3);
             margin-bottom: var(--space-6);
-            width: 100%;
         }
 
         .feature-check {
@@ -1038,13 +801,7 @@
             padding: var(--space-2);
             border-radius: var(--radius-md);
             background: var(--gray-50);
-            transition: var(--transition-base);
             font-size: 0.875rem;
-            width: 100%;
-        }
-
-        .feature-check:hover {
-            background: var(--gray-100);
         }
 
         .check-icon {
@@ -1052,6 +809,83 @@
             font-size: 1rem;
             flex-shrink: 0;
             margin-top: 2px;
+        }
+
+        /* ===== ORDER FORM ===== */
+        .order-container {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            margin-top: var(--space-6);
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-3);
+            margin-bottom: var(--space-3);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-4);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: var(--space-2);
+            font-weight: 600;
+            color: var(--gray-700);
+            font-size: 0.875rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: var(--space-3) var(--space-4);
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-md);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition-base);
+            background: white;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-500);
+            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+        }
+
+        select.form-control {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right var(--space-3) center;
+            background-size: 1.5em;
+            padding-right: var(--space-10);
+        }
+
+        .form-note {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            margin-top: var(--space-2);
+            padding: var(--space-3);
+            background: rgba(99, 102, 241, 0.05);
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--primary-500);
+            line-height: 1.5;
+        }
+
+        .form-status {
+            padding: var(--space-3);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-4);
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 3px solid var(--info);
+            color: var(--gray-700);
+        }
+
+        .form-status .status-icon {
+            margin-right: var(--space-2);
         }
 
         /* ===== PROCESS SECTION ===== */
@@ -1081,7 +915,6 @@
             display: flex;
             margin-bottom: var(--space-8);
             position: relative;
-            width: 100%;
         }
 
         .step-content {
@@ -1090,21 +923,8 @@
             background: white;
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-md);
-            position: relative;
-            animation: fadeInUp 0.6s ease-out;
             margin-left: 60px;
             width: calc(100% - 60px);
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .step-number {
@@ -1138,7 +958,7 @@
             font-size: 0.9375rem;
         }
 
-        /* ===== AFTER SALES SECTION ===== */
+        /* ===== AFTER SALES ===== */
         .after-sales {
             background: linear-gradient(135deg, rgba(99, 102, 241, 0.02) 0%, rgba(217, 70, 239, 0.02) 100%);
         }
@@ -1148,16 +968,10 @@
             grid-template-columns: 1fr;
             gap: var(--space-6);
             margin-top: var(--space-6);
-            width: 100%;
         }
 
         .after-sales-card {
-            padding: var(--space-6);
             text-align: center;
-            background: white;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-md);
-            width: 100%;
         }
 
         .after-sales-icon {
@@ -1185,142 +999,16 @@
             margin-bottom: var(--space-4);
         }
 
-        .upsell-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-2);
-            padding: var(--space-2) var(--space-3);
-            background: var(--warning);
-            color: white;
-            border-radius: var(--radius-full);
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-top: var(--space-2);
-        }
-
-        /* ===== ORDER FORM SECTION ===== */
-        .order-container {
-            background: white;
-            border-radius: var(--radius-lg);
-            padding: var(--space-6);
-            margin-top: var(--space-6);
-            box-shadow: var(--shadow-md);
-            width: 100%;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--space-3);
-            margin-bottom: var(--space-3);
-            width: 100%;
-        }
-
-        .form-group {
-            margin-bottom: var(--space-4);
-            width: 100%;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: var(--space-2);
-            font-weight: 600;
-            color: var(--gray-700);
-            font-size: 0.875rem;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: var(--space-3) var(--space-4);
-            border: 1px solid var(--gray-300);
-            border-radius: var(--radius-md);
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            transition: var(--transition-base);
-            background: white;
-            min-height: 48px;
-            -webkit-appearance: none;
-            appearance: none;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary-500);
-            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
-        }
-
-        .form-control::placeholder {
-            color: var(--gray-400);
-        }
-
-        select.form-control {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right var(--space-3) center;
-            background-size: 1.5em;
-            padding-right: var(--space-10);
-        }
-
-        .form-note {
-            font-size: 0.875rem;
-            color: var(--gray-600);
-            margin-top: var(--space-2);
-            padding: var(--space-3);
-            background: rgba(99, 102, 241, 0.05);
-            border-radius: var(--radius-md);
-            border-left: 3px solid var(--primary-500);
-            line-height: 1.5;
-        }
-
-        /* Form status styles */
-        .form-status {
-            padding: var(--space-3);
-            border-radius: var(--radius-md);
-            margin-bottom: var(--space-4);
-            width: 100%;
-        }
-
-        .form-status.info {
-            background: rgba(59, 130, 246, 0.1);
-            border-left: 3px solid var(--info);
-            color: var(--gray-700);
-            display: block;
-        }
-
-        .form-status.success {
-            background: rgba(16, 185, 129, 0.1);
-            border-left: 3px solid var(--success);
-            color: var(--gray-700);
-            display: block;
-        }
-
-        .form-status .status-icon {
-            margin-right: var(--space-2);
-        }
-
-        /* ===== FINAL CTA SECTION ===== */
+        /* ===== FINAL CTA ===== */
         .final-cta {
             background: var(--gradient-primary);
             color: white;
             position: relative;
             overflow: hidden;
-            width: 100%;
-        }
-
-        .final-cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
         }
 
         .final-cta .section-title {
             color: white;
-            -webkit-text-fill-color: white;
             background: none;
         }
 
@@ -1336,7 +1024,6 @@
             text-align: center;
             position: relative;
             z-index: 1;
-            width: 100%;
         }
 
         .cta-button-large {
@@ -1363,35 +1050,12 @@
             box-shadow: var(--shadow-xl);
         }
 
-        .guarantee-badges {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: var(--space-3);
-            margin-top: var(--space-4);
-            width: 100%;
-        }
-
-        .guarantee-badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--space-2);
-            padding: var(--space-3) var(--space-4);
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: var(--radius-full);
-            backdrop-filter: blur(10px);
-            font-size: 0.875rem;
-            width: 100%;
-            max-width: 300px;
-        }
-
-        /* ===== FLOATING WHATSAPP BUTTON ===== */
+        /* ===== FLOATING WHATSAPP ===== */
         .floating-whatsapp {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            z-index: var(--z-floating);
+            z-index: 1000;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
@@ -1415,29 +1079,6 @@
         .whatsapp-button:hover {
             background: #128C7E;
             transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
-        }
-
-        .whatsapp-notification {
-            background: white;
-            padding: var(--space-2) var(--space-3);
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-md);
-            font-size: 0.75rem;
-            color: var(--gray-700);
-            display: flex;
-            align-items: center;
-            gap: var(--space-2);
-            opacity: 0;
-            transform: translateY(10px);
-            transition: var(--transition-base);
-            pointer-events: none;
-            white-space: nowrap;
-        }
-
-        .floating-whatsapp:hover .whatsapp-notification {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         /* ===== FOOTER ===== */
@@ -1445,7 +1086,6 @@
             background: var(--gray-900);
             color: white;
             padding: var(--space-12) 0 var(--space-8);
-            width: 100%;
         }
 
         .footer-content {
@@ -1453,14 +1093,13 @@
             grid-template-columns: 1fr;
             gap: var(--space-8);
             margin-bottom: var(--space-8);
-            width: 100%;
         }
 
         .footer-brand .logo-main {
             background: linear-gradient(135deg, white, var(--gray-300));
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             background-clip: text;
+            color: transparent;
             margin-bottom: var(--space-2);
         }
 
@@ -1493,48 +1132,6 @@
             transform: translateY(-2px);
         }
 
-        .footer-heading {
-            font-size: 1.125rem;
-            margin-bottom: var(--space-4);
-            color: white;
-        }
-
-        .footer-links {
-            display: grid;
-            gap: var(--space-2);
-        }
-
-        .footer-link {
-            color: var(--gray-400);
-            transition: var(--transition-base);
-            font-size: 0.875rem;
-            padding: var(--space-1) 0;
-        }
-
-        .footer-link:hover {
-            color: white;
-        }
-
-        .contact-info {
-            display: grid;
-            gap: var(--space-3);
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-2);
-            color: var(--gray-400);
-            font-size: 0.875rem;
-        }
-
-        .contact-icon {
-            color: var(--primary-400);
-            font-size: 1rem;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
         .footer-bottom {
             text-align: center;
             padding-top: var(--space-6);
@@ -1544,32 +1141,17 @@
             line-height: 1.5;
         }
 
-        /* ===== ANIMATION CLASSES ===== */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.4s ease, 
-                        transform 0.4s ease;
-        }
-
-        .animate-on-scroll.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ===== RESPONSIVE DESIGN ===== */
-        /* Tablet: 768px - 1024px */
+        /* ===== RESPONSIVE ===== */
+        /* Tablet */
         @media (min-width: 768px) {
-            /* Typography */
             .section-title {
-                font-size: 2rem;
-            }
-            
-            .hero-title {
                 font-size: 2.25rem;
             }
             
-            /* Layouts */
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
             .features-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -1626,30 +1208,10 @@
                 border: 1px solid var(--gray-300);
             }
             
-            .social-icon-header:hover {
-                color: white;
-                transform: scale(1.05);
-            }
-            
-            .social-icon-header.whatsapp:hover {
-                background: #25D366;
-                border-color: #25D366;
-            }
-            
-            .social-icon-header.instagram:hover {
-                background: #E4405F;
-                border-color: #E4405F;
-            }
-            
             .nav-cta {
                 display: block;
             }
             
-            .logo-tagline {
-                display: block;
-            }
-            
-            /* Hero Section */
             .hero-actions {
                 flex-direction: row;
                 justify-content: center;
@@ -1659,7 +1221,6 @@
                 width: auto;
             }
             
-            /* Trust Badges */
             .trust-badges-container {
                 justify-content: center;
                 overflow-x: visible;
@@ -1699,33 +1260,46 @@
                 transform: translateX(-50%);
             }
             
-            /* Footer */
             .footer-content {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
-            .guarantee-badges {
-                flex-direction: row;
-                justify-content: center;
-            }
-            
-            .guarantee-badge {
-                width: auto;
-            }
         }
 
-        /* Desktop: > 1024px */
+        /* Desktop */
         @media (min-width: 1024px) {
-            /* Typography */
+            .section {
+                padding: var(--space-16) 0;
+            }
+            
+            .section-header {
+                margin-bottom: var(--space-12);
+            }
+            
             .section-title {
                 font-size: 2.5rem;
             }
             
-            .hero-title {
-                font-size: 2.75rem;
+            .hero {
+                padding-top: 8rem;
+                padding-bottom: var(--space-20);
             }
             
-            /* Layouts */
+            .hero-content {
+                flex-direction: row;
+                text-align: left;
+                align-items: center;
+            }
+            
+            .hero-text {
+                flex: 1;
+            }
+            
+            .hero-actions {
+                justify-content: flex-start;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            
             .features-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
@@ -1743,76 +1317,43 @@
                 grid-template-columns: repeat(3, 1fr);
             }
             
-            .hero-content {
-                flex-direction: row;
-                text-align: left;
-                align-items: flex-start;
-            }
-            
-            .hero-text {
-                flex: 1;
-            }
-            
-            .hero-visual {
-                flex: 1;
-                animation: slideInRight 0.8s ease-out 0.2s both;
-            }
-            
-            @keyframes slideInRight {
-                from {
-                    opacity: 0;
-                    transform: translateX(20px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
-            }
-            
-            .hero-actions {
-                justify-content: flex-start;
-                margin-left: 0;
-                margin-right: 0;
-            }
-            
-            /* Navigation */
             .nav-links {
                 gap: var(--space-6);
             }
             
-            /* Footer */
             .footer-content {
                 grid-template-columns: 2fr 1fr 1fr 1.5fr;
                 gap: var(--space-12);
             }
-            
-            /* Section Spacing */
-            .section {
-                padding: var(--space-16) 0;
-            }
-            
-            .section-header {
-                margin-bottom: var(--space-12);
-            }
-            
-            .hero {
-                padding-top: 8rem;
-                padding-bottom: var(--space-20);
-            }
         }
 
-        /* Large Desktop: > 1280px */
+        /* Large Desktop */
         @media (min-width: 1280px) {
-            .container {
-                max-width: 1280px;
-            }
-            
             .hero-title {
                 font-size: 3rem;
             }
         }
 
-        /* Small Mobile: < 375px */
+        /* Small Mobile */
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.75rem;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+            }
+            
+            .hero-highlights {
+                grid-template-columns: 1fr;
+            }
+            
+            .trust-badge {
+                min-width: 90px;
+            }
+        }
+
+        /* Very Small Mobile */
         @media (max-width: 374px) {
             .hero-title {
                 font-size: 1.5rem;
@@ -1822,109 +1363,21 @@
                 font-size: 1.5rem;
             }
             
-            .hero-highlights {
-                grid-template-columns: 1fr;
-            }
-            
             .trust-badge {
                 min-width: 80px;
+                padding: var(--space-2);
             }
             
             .portfolio-link {
                 font-size: 0.75rem;
             }
         }
-
-        /* Notification Styles */
-        .notification {
-            position: fixed;
-            top: 100px;
-            right: 20px;
-            padding: 1rem 1.5rem;
-            border-radius: 0.5rem;
-            color: white;
-            font-weight: 500;
-            box-shadow: var(--shadow-lg);
-            z-index: 1000;
-            animation: slideIn 0.3s ease, fadeOut 0.3s ease 3s forwards;
-            max-width: calc(100vw - 40px);
-        }
-        
-        .notification.success {
-            background: var(--success);
-        }
-        
-        .notification.error {
-            background: var(--error);
-        }
-        
-        .notification-content {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        
-        @keyframes slideIn {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        
-        @keyframes fadeOut {
-            to { opacity: 0; transform: translateX(100%); }
-        }
-
-        /* Selected Package Highlight */
-        .selected-package {
-            border-left: 4px solid var(--primary-500) !important;
-            background: rgba(99, 102, 241, 0.03) !important;
-        }
-
-        .selected-indicator {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background: var(--primary-500);
-            color: white;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            box-shadow: var(--shadow-md);
-            z-index: 2;
-        }
-
-        /* Loading Animation */
-        .loading {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .loaded {
-            opacity: 1;
-        }
-
-        /* Safe Area Insets for Notch Phones */
-        @supports (padding: max(0px)) {
-            .header,
-            .promo-banner,
-            .floating-whatsapp {
-                padding-left: max(var(--space-4), env(safe-area-inset-left));
-                padding-right: max(var(--space-4), env(safe-area-inset-right));
-            }
-            
-            .floating-whatsapp {
-                bottom: max(20px, env(safe-area-inset-bottom));
-            }
-        }
     </style>
 </head>
-<body class="loading">
+<body>
     <!-- Promo Banner -->
     <div class="promo-banner">
-        <span>🔥 HARGA PROMO PERDANA! Segera pesan sebelum harga normal kembali!</span>
+        <span>🔥 PROMO PERDANA! Pesan sekarang sebelum harga kembali normal!</span>
     </div>
 
     <!-- Header -->
@@ -1939,20 +1392,20 @@
                 <nav class="nav">
                     <ul class="nav-links">
                         <li><a href="#hero" class="nav-link active">Beranda</a></li>
-                        <li><a href="#features" class="nav-link">Fitur Unggulan</a></li>
-                        <li><a href="#portfolio" class="nav-link">Portfolio Klien</a></li>
-                        <li><a href="#pricing" class="nav-link">Paket Harga</a></li>
-                        <li><a href="#process" class="nav-link">Proses Kerja</a></li>
+                        <li><a href="#features" class="nav-link">Fitur</a></li>
+                        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                        <li><a href="#pricing" class="nav-link">Harga</a></li>
+                        <li><a href="#process" class="nav-link">Proses</a></li>
                         <li><a href="#after-sales" class="nav-link">After Sales</a></li>
                         <li><a href="#contact" class="nav-link">Kontak</a></li>
                     </ul>
                     
                     <!-- Header Social Icons - Desktop Only -->
                     <div class="header-social-icons">
-                        <a href="https://wa.me/6289526382162" class="social-icon-header whatsapp" title="Hubungi WhatsApp" target="_blank">
+                        <a href="https://wa.me/6289526382162" class="social-icon-header whatsapp" title="WhatsApp" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="https://www.instagram.com/hskakalpa/" class="social-icon-header instagram" title="Ikuti Instagram" target="_blank">
+                        <a href="https://www.instagram.com/hskakalpa/" class="social-icon-header instagram" title="Instagram" target="_blank">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -1961,7 +1414,7 @@
                         <a href="#pricing" class="btn btn-primary">Pesan Sekarang</a>
                     </div>
                     
-                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
                         <i class="fas fa-bars"></i>
                     </button>
                 </nav>
@@ -1974,15 +1427,15 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">Portofolio atau Bisnis Anda Sudah Siap? Tenang! Kami Bikin Website-nya, Kami Urus Hosting-nya</h1>
-                    <p class="hero-subtitle">Solusi cepat dan efisien untuk Portofolio atau Bisnis Anda.</p>
+                    <h1 class="hero-title">Portfolio atau Bisnis Anda Sudah Siap? Kami Buat Website-nya, Kami Urus Hosting-nya</h1>
+                    <p class="hero-subtitle">Solusi cepat dan efisien untuk Portfolio atau Bisnis Anda dengan website 1 halaman profesional.</p>
                     
                     <div class="hero-actions">
                         <a href="#pricing" class="btn btn-primary btn-lg">
                             <i class="fas fa-shopping-cart"></i> Pesan Sekarang
                         </a>
                         <a href="#portfolio" class="btn btn-secondary btn-lg">
-                            <i class="fas fa-eye"></i> Lihat Portfolio Klien
+                            <i class="fas fa-eye"></i> Lihat Portfolio
                         </a>
                     </div>
                     
@@ -1993,11 +1446,11 @@
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-server highlight-icon"></i>
-                            <div class="highlight-text">Hosting Gratis Selamanya</div>
+                            <div class="highlight-text">Hosting Gratis</div>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-shield-alt highlight-icon"></i>
-                            <div class="highlight-text">Extra Garansi Revisi</div>
+                            <div class="highlight-text">Garansi Revisi</div>
                         </div>
                     </div>
                 </div>
@@ -2009,41 +1462,41 @@
     <section class="section features" id="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Mengapa Harus WebSipp</h2>
-                <p class="section-subtitle">Kami fokus pada apa yang benar-benar penting untuk website 1 halaman Anda</p>
+                <h2 class="section-title">Mengapa WebSipp</h2>
+                <p class="section-subtitle">Kami fokus pada apa yang penting untuk website 1 halaman Anda</p>
             </div>
             
             <div class="features-grid">
-                <div class="feature-card card animate-on-scroll">
+                <div class="feature-card card">
                     <div class="feature-icon-wrapper">
                         <i class="fas fa-server"></i>
                     </div>
-                    <h3>Zero-Cost Hosting</h3>
-                    <p>Website Anda dihosting GRATIS selamanya menggunakan GitHub Pages. Tidak ada biaya bulanan/tahunan untuk hosting.</p>
+                    <h3>Hosting Gratis</h3>
+                    <p>Website Anda dihosting GRATIS selamanya menggunakan GitHub Pages. Tanpa biaya bulanan/tahunan.</p>
                 </div>
                 
-                <div class="feature-card card animate-on-scroll">
+                <div class="feature-card card">
                     <div class="feature-icon-wrapper">
                         <i class="fas fa-bolt"></i>
                     </div>
                     <h3>36 Jam Jadi</h3>
-                    <p>Dengan teknisi kami, website Anda siap online dalam 36 jam setelah data lengkap.</p>
+                    <p>Website siap online dalam 36 jam setelah data lengkap. Proses cepat tanpa menunggu lama.</p>
                 </div>
                 
-                <div class="feature-card card animate-on-scroll">
+                <div class="feature-card card">
                     <div class="feature-icon-wrapper">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Jaminan Kesempurnaan</h3>
-                    <p>Kami pastikan website sempurna. Garansi perbaikan minor 7 hari penuh setelah live</p>
+                    <h3>Garansi Kesempurnaan</h3>
+                    <p>Kami pastikan website sempurna. Garansi perbaikan minor 7 hari setelah live.</p>
                 </div>
 
-                <div class="feature-card card animate-on-scroll">
+                <div class="feature-card card">
                     <div class="feature-icon-wrapper">
                         <i class="fas fa-headset"></i>
                     </div>
                     <h3>Support 24/7</h3>
-                    <p>Saluran komunikasi (WhatsApp) siaga 24 jam untuk menerima pesan, pertanyaan, atau laporan darurat.</p>
+                    <p>Saluran komunikasi WhatsApp siap 24 jam untuk pertanyaan atau laporan darurat.</p>
                 </div>
             </div>
         </div>
@@ -2054,23 +1507,21 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Portfolio Klien WebSipp</h2>
-                <p class="section-subtitle">Lihat contoh nyata website yang telah kami buat untuk klien-klien kami</p>
+                <p class="section-subtitle">Contoh nyata website yang telah kami buat untuk klien</p>
             </div>
             
-            <!-- Demo Explanation Text -->
-            <div class="demo-explanation animate-on-scroll">
-                <p>Berikut adalah contoh asli website klien yang telah kami buat. Klik link untuk melihat langsung.</p>
+            <div class="demo-explanation">
+                <p>Berikut adalah contoh asli website klien. Klik link untuk melihat langsung.</p>
             </div>
             
             <div class="portfolio-grid">
                 <!-- Toko Online Card -->
-                <div class="portfolio-card card animate-on-scroll">
+                <div class="portfolio-card card">
                     <i class="fas fa-store portfolio-icon"></i>
                     <h3>Toko Online</h3>
-                    <p>Website untuk menjual produk secara online dengan tampilan menarik dan fungsionalitas yang mendukung penjualan.</p>
+                    <p>Website untuk menjual produk online dengan tampilan menarik dan fungsionalitas penjualan.</p>
                     <a href="https://websipp.github.io/Web-PreOrder-LogaritmaKantin/" class="btn btn-secondary" target="_blank">Lihat Contoh</a>
                     
-                    <!-- Client Portfolio for Toko Online -->
                     <div class="client-portfolio">
                         <div class="portfolio-title">
                             <i class="fas fa-link"></i>
@@ -2086,7 +1537,7 @@
                             <div class="portfolio-item">
                                 <a href="https://websipp.github.io/Fasa-Florist-Web/" class="portfolio-link" target="_blank">
                                     <i class="fas fa-external-link-alt"></i>
-                                    Fasa Florist – Website Jasa Buket Bunga
+                                    Fasa Florist – Jasa Buket Bunga
                                 </a>
                             </div>
                         </div>
@@ -2094,13 +1545,12 @@
                 </div>
                 
                 <!-- Portfolio Pribadi Card -->
-                <div class="portfolio-card card animate-on-scroll">
+                <div class="portfolio-card card">
                     <i class="fas fa-user-tie portfolio-icon"></i>
                     <h3>Portfolio Pribadi</h3>
-                    <p>Tampilkan karya dan keahlian Anda dengan website portfolio yang elegan, profesional, dan mudah diakses.</p>
+                    <p>Tampilkan karya dan keahlian Anda dengan website portfolio yang elegan dan profesional.</p>
                     <a href="https://websipp.github.io/AnisaAulia-Web/" class="btn btn-secondary" target="_blank">Lihat Contoh</a>
                     
-                    <!-- Client Portfolio for Portfolio Pribadi -->
                     <div class="client-portfolio">
                         <div class="portfolio-title">
                             <i class="fas fa-link"></i>
@@ -2118,13 +1568,12 @@
                 </div>
                 
                 <!-- Company Profile Card -->
-                <div class="portfolio-card card animate-on-scroll">
+                <div class="portfolio-card card">
                     <i class="fas fa-building portfolio-icon"></i>
                     <h3>Company Profile</h3>
-                    <p>Tingkatkan kredibilitas bisnis dengan website profil perusahaan yang informatif dan representatif.</p>
+                    <p>Tingkatkan kredibilitas bisnis dengan website profil perusahaan yang informatif.</p>
                     <a href="https://websipp.github.io/RumahTehNinuk-Web/" class="btn btn-secondary" target="_blank">Lihat Contoh</a>
                     
-                    <!-- Client Portfolio for Company Profile -->
                     <div class="client-portfolio">
                         <div class="portfolio-title">
                             <i class="fas fa-link"></i>
@@ -2149,27 +1598,27 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Paket Harga Promo Perdana</h2>
-                <p class="section-subtitle">Hanya untuk validasi pasar. Pilih paket sesuai kebutuhan website Anda.</p>
+                <p class="section-subtitle">Harga spesial untuk validasi pasar. Pilih paket sesuai kebutuhan.</p>
             </div>
             
             <div class="pricing-container">
                 <!-- Paket Portfolio -->
-                <div class="pricing-card card animate-on-scroll" id="packagePortfolio">
+                <div class="pricing-card card" id="packagePortfolio">
                     <div class="limited-spot-badge">Spot Terbatas</div>
                     <div class="badge badge-primary">Harga Promo</div>
                     
                     <div class="pricing-header">
                         <h2 class="pricing-title">PAKET PORTFOLIO</h2>
-                        <p class="pricing-subtitle">Website 1 Halaman Profil CV/Portofolio</p>
+                        <p class="pricing-subtitle">Website 1 Halaman Profil CV/Portfolio</p>
                     </div>
                     
                     <div class="price-comparison">
-                        <div class="price-normal-full">Harga Normal: Rp 250.000</div>
+                        <div class="price-normal-full">Normal: Rp 250.000</div>
                         <div class="price-promo-full">Rp 30.000</div>
                     </div>
                     
                     <div class="price-desc">
-                        <p><strong>Untuk validasi pasar saja!</strong> Segera Pesan</p>
+                        <p><strong>Untuk validasi pasar!</strong> Segera pesan</p>
                     </div>
                     
                     <div class="features-list">
@@ -2201,22 +1650,22 @@
                 </div>
                 
                 <!-- Paket Bisnis -->
-                <div class="pricing-card card animate-on-scroll" id="packageBisnis">
+                <div class="pricing-card card" id="packageBisnis">
                     <div class="limited-spot-badge">Spot Terbatas</div>
                     <div class="badge badge-success">Best Value</div>
                     
                     <div class="pricing-header">
                         <h2 class="pricing-title">PAKET BISNIS</h2>
-                        <p class="pricing-subtitle">Website 1 Halaman Landing Page UMKM/Profil Perusahaan</p>
+                        <p class="pricing-subtitle">Website 1 Halaman Landing Page UMKM/Perusahaan</p>
                     </div>
                     
                     <div class="price-comparison">
-                        <div class="price-normal-full">Harga Normal: Rp 400.000</div>
+                        <div class="price-normal-full">Normal: Rp 400.000</div>
                         <div class="price-promo-full">Rp 50.000</div>
                     </div>
                     
                     <div class="price-desc">
-                        <p><strong>Untuk validasi pasar saja!</strong> Landing page bisnis dengan design premium.</p>
+                        <p><strong>Untuk validasi pasar!</strong> Landing page bisnis premium.</p>
                     </div>
                     
                     <div class="features-list">
@@ -2251,9 +1700,8 @@
             <!-- Order Form -->
             <div class="order-container card" id="orderFormContainer">
                 <h3 class="text-2xl mb-4 text-center">Formulir Pemesanan Promo</h3>
-                <p class="text-center text-gray-600 mb-6">Isi formulir berikut untuk mendapatkan website 1 halaman dengan harga promo perdana.</p>
+                <p class="text-center text-gray-600 mb-6">Isi formulir untuk mendapatkan website 1 halaman dengan harga promo.</p>
                 
-                <!-- Form Status -->
                 <div class="form-status info" id="formStatus">
                     <i class="fas fa-info-circle status-icon"></i>
                     <span>Pilih paket terlebih dahulu untuk melanjutkan pemesanan.</span>
@@ -2280,20 +1728,20 @@
                             <option value="Paket Bisnis (Rp 50.000)">Paket Bisnis - Rp 50.000 (Normal: Rp 400.000)</option>
                         </select>
                         <div class="form-note">
-                            <i class="fas fa-lightbulb"></i> Ini adalah harga promo perdana untuk validasi pasar saja. Harga normal akan kembali setelah periode promo.
+                            <i class="fas fa-lightbulb"></i> Harga promo perdana untuk validasi pasar. Harga normal kembali setelah periode promo.
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label for="jenis-website" class="form-label">Jenis Website *</label>
                         <select id="jenis-website" class="form-control" required disabled>
-                            <option value="">-- Pilih Paket terlebih dahulu --</option>
+                            <option value="">-- Pilih paket terlebih dahulu --</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
                         <label for="pesan" class="form-label">Informasi Tambahan (opsional)</label>
-                        <textarea id="pesan" class="form-control" rows="3" placeholder="Warna favorit, referensi website, atau informasi spesifik lainnya..."></textarea>
+                        <textarea id="pesan" class="form-control" rows="3" placeholder="Warna favorit, referensi website, atau informasi lainnya..."></textarea>
                     </div>
                     
                     <button type="submit" class="btn btn-whatsapp btn-block btn-lg">
@@ -2302,7 +1750,7 @@
                     
                     <div class="form-note mt-4">
                         <i class="fas fa-exclamation-circle"></i>
-                        <strong>Penting:</strong> Website yang dibuat adalah <strong>1 halaman statis. Tidak termasuk domain custom, CMS, admin panel, atau fitur kompleks lainnya.
+                        <strong>Penting:</strong> Website yang dibuat adalah <strong>1 halaman statis</strong>. Tidak termasuk domain custom, CMS, admin panel, atau fitur kompleks lainnya.
                     </div>
                 </form>
             </div>
@@ -2313,40 +1761,40 @@
     <section class="section process" id="process">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Proses Kerja yang Sederhana</h2>
-                <p class="section-subtitle">Empat langkah mudah mendapatkan website profesional Anda</p>
+                <h2 class="section-title">Proses Kerja Sederhana</h2>
+                <p class="section-subtitle">4 langkah mudah mendapatkan website profesional Anda</p>
             </div>
             
             <div class="process-timeline">
-                <div class="process-step animate-on-scroll">
+                <div class="process-step">
                     <div class="step-number">1</div>
                     <div class="step-content card">
                         <h3>Pemesanan & Konsultasi</h3>
-                        <p>Pilih paket dan isi formulir pemesanan. Konsultasikan kebutuhan website Anda via WhatsApp.</p>
+                        <p>Pilih paket dan isi formulir pemesanan. Konsultasikan kebutuhan website via WhatsApp.</p>
                     </div>
                 </div>
                 
-                <div class="process-step animate-on-scroll">
+                <div class="process-step">
                     <div class="step-number">2</div>
                     <div class="step-content card">
                         <h3>Pengiriman Data & Pembayaran</h3>
-                        <p>Kirim semua materi yang akan dimasukkan ke dalam website (teks, foto, logo) dan lakukan pembayaran</p>
+                        <p>Kirim materi (teks, foto, logo) dan lakukan pembayaran sesuai paket.</p>
                     </div>
                 </div>
                 
-                <div class="process-step animate-on-scroll">
+                <div class="process-step">
                     <div class="step-number">3</div>
                     <div class="step-content card">
                         <h3>Pengerjaan 36 Jam</h3>
-                        <p>Tim kami membuat website Anda setelah semua data masuk. Proses maksimal 36 jam.</p>
+                        <p>Tim kami membuat website Anda setelah data lengkap. Proses maksimal 36 jam.</p>
                     </div>
                 </div>
                 
-                <div class="process-step animate-on-scroll">
+                <div class="process-step">
                     <div class="step-number">4</div>
                     <div class="step-content card">
                         <h3>Launching & Revisi</h3>
-                        <p>Website Anda online! Gunakan masa revisi gratis selama 7 hari untuk penyempurnaan website.</p>
+                        <p>Website online! Gunakan masa revisi gratis 7 hari untuk penyempurnaan.</p>
                     </div>
                 </div>
             </div>
@@ -2357,12 +1805,12 @@
     <section class="section after-sales" id="after-sales">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Layanan Purna Jual & Maintenance</h2>
-                <p class="section-subtitle">Dukungan setelah website Anda live dan strategi untuk kebutuhan berkelanjutan</p>
+                <h2 class="section-title">Layanan Purna Jual</h2>
+                <p class="section-subtitle">Dukungan setelah website Anda live dan kebutuhan berkelanjutan</p>
             </div>
             
             <div class="after-sales-grid">
-                <div class="after-sales-card animate-on-scroll">
+                <div class="after-sales-card card">
                     <div class="after-sales-icon">
                         <i class="fas fa-sync-alt"></i>
                     </div>
@@ -2370,35 +1818,30 @@
                     <p>Setiap paket sudah termasuk <strong>revisi minor gratis</strong> dalam <strong>7 hari pertama</strong> setelah website live.</p>
                 </div>
                 
-                <div class="after-sales-card animate-on-scroll">
+                <div class="after-sales-card card">
                     <div class="after-sales-icon">
                         <i class="fas fa-tools"></i>
                     </div>
                     <h3>Maintenance Berbayar</h3>
-                    <p>Perlu update reguler di luar masa revisi gratis? Kami tawarkan solusi maintenance berkelanjutan.</p>
+                    <p>Perlu update reguler di luar masa revisi gratis? Tersedia solusi maintenance berkelanjutan.</p>
                     <p><strong>Paket Maintenance Bulanan mulai Rp 25.000/bulan</strong> termasuk:</p>
-                    <ul style="text-align: color: var(--gray-600); margin: 1rem 0; padding-left: 1.5rem;">
+                    <ul style="color: var(--gray-600); margin: 1rem 0; padding-left: 1.5rem;">
                         <li>Update konten teks & gambar (tak terbatas)</li>
                         <li>Konsultasi teknis via WhatsApp</li>
                     </ul>
-                    <div class="upsell-badge">
-                        <i class="fas fa-arrow-up"></i>
-                        Strategi Upsell untuk kebutuhan berkelanjutan
-                    </div>
                 </div>
                 
-                <div class="after-sales-card animate-on-scroll">
+                <div class="after-sales-card card">
                     <div class="after-sales-icon">
                         <i class="fas fa-life-ring"></i>
                     </div>
                     <h3>Support Purna Jual</h3>
-                    <p>Tim support kami tetap siap membantu meski masa revisi gratis telah berakhir.</p>
+                    <p>Tim support kami siap membantu meski masa revisi gratis telah berakhir.</p>
                     <p><strong>Layanan support berbayar:</strong></p>
-                    <ul style="text-align: color: var(--gray-600); margin: 1rem 0; padding-left: 1.5rem;">
+                    <ul style="color: var(--gray-600); margin: 1rem 0; padding-left: 1.5rem;">
                         <li>Perubahan konten dan konsultasi: Rp 15.000/update</li>
                         <li>Migrasi hosting: Rp 30.000 - 50.000/project</li>
                     </ul>
-                    <p>Transparan, terjangkau, dan sesuai kebutuhan bisnis berkembang Anda.</p>
                 </div>
             </div>
         </div>
@@ -2409,7 +1852,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Ambil Promo Perdana Sekarang!</h2>
-                <p class="section-subtitle">Jangan tunda lagi! Harga promo super hemat ini terbatas. Amankan website profesional Anda sekarang</p>
+                <p class="section-subtitle">Jangan tunda lagi! Harga promo super hemat ini terbatas.</p>
             </div>
             
             <div class="cta-content">
@@ -2449,7 +1892,6 @@
     <div class="floating-whatsapp">
         <div class="whatsapp-notification">
             <i class="fas fa-comment-dots"></i>
-            <span>Konsultasi gratis via WhatsApp</span>
         </div>
         <a href="https://wa.me/6289526382162?text=Halo,%20saya%20mau%20konsultasi%20tentang%20promo%20website%201%20halaman" 
            class="whatsapp-button" 
@@ -2460,11 +1902,7 @@
     </div>
 
     <script>
-        // ============================
-        // GLOBAL VARIABLES
-        // ============================
-        
-        // Data mapping untuk paket dan jenis website
+        // Package mapping
         const packageWebsiteMapping = {
             'Paket Portfolio (Rp 30.000)': {
                 websites: [
@@ -2472,8 +1910,7 @@
                     { value: 'CV Online Profesional', label: 'CV Online Profesional' },
                     { value: 'Portfolio Freelancer', label: 'Portfolio Freelancer' },
                     { value: 'Website Profil Diri', label: 'Website Profil Diri' }
-                ],
-                note: 'Pilih jenis portfolio yang sesuai dengan kebutuhan Anda. Template dari 5 pilihan siap pakai.'
+                ]
             },
             'Paket Bisnis (Rp 50.000)': {
                 websites: [
@@ -2481,333 +1918,60 @@
                     { value: 'Website Profil Perusahaan', label: 'Website Profil Perusahaan' },
                     { value: 'Website Jasa Profesional', label: 'Website Jasa Profesional' },
                     { value: 'Website Produk/Toko Sederhana', label: 'Website Produk/Toko Sederhana' }
-                ],
-                note: 'Pilih jenis website bisnis yang sesuai. Template premium untuk kesan profesional.'
+                ]
             }
         };
         
-        // Current selected package
-        let currentSelectedPackage = null;
-        
-        // ============================
-        // DOM READY
-        // ============================
+        // Initialize
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('WebSipp - Initializing...');
-            
-            // Initialize all functions
             initMobileMenu();
-            initFormLogic();
             initHeaderEffects();
-            initAnimations();
+            initFormLogic();
             initFormSubmission();
-            initPriceAnimations();
-            enhanceFormValidation();
-            enhanceUX();
-            
-            // Remove loading class
-            setTimeout(() => {
-                document.body.classList.remove('loading');
-                document.body.classList.add('loaded');
-            }, 100);
-            
-            console.log('WebSipp - Initialized successfully!');
+            initAnimations();
         });
         
-        // ============================
-        // SELECT PACKAGE FUNCTION
-        // ============================
-        function selectPackage(packageName) {
-            console.log('Memilih paket promo:', packageName);
-            
-            // Update current selection
-            currentSelectedPackage = packageName;
-            
-            // Update dropdown
-            const packageSelect = document.getElementById('jenis-paket');
-            if (packageSelect) {
-                packageSelect.value = packageName;
-                
-                // Trigger change event to update website options
-                const event = new Event('change');
-                packageSelect.dispatchEvent(event);
-            }
-            
-            // Highlight selected pricing card
-            highlightSelectedPackage(packageName);
-            
-            // Scroll to pricing section
-            scrollToForm();
-            
-            // Show success notification
-            showNotification(`Paket Promo <strong>${packageName}</strong> telah dipilih!`, 'success');
-        }
-        
-        // ============================
-        // SCROLL TO FORM FUNCTION
-        // ============================
-        function scrollToForm() {
-            const pricingSection = document.getElementById('pricing');
-            if (pricingSection) {
-                // Smooth scroll to pricing section
-                pricingSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-                
-                // Add visual highlight to form container
-                setTimeout(() => {
-                    const formContainer = document.getElementById('orderFormContainer');
-                    if (formContainer) {
-                        formContainer.style.boxShadow = '0 0 0 3px rgba(99, 102, 241, 0.3)';
-                        formContainer.style.transition = 'box-shadow 0.3s ease';
-                        
-                        // Remove highlight after 1.5 seconds
-                        setTimeout(() => {
-                            formContainer.style.boxShadow = '';
-                        }, 1500);
-                    }
-                }, 500);
-                
-                return false;
-            }
-            return true;
-        }
-        
-        // ============================
-        // HIGHLIGHT SELECTED PACKAGE
-        // ============================
-        function highlightSelectedPackage(packageName) {
-            // Remove all highlights first
-            const portfolioCard = document.getElementById('packagePortfolio');
-            const bisnisCard = document.getElementById('packageBisnis');
-            
-            if (portfolioCard) {
-                portfolioCard.classList.remove('selected-package');
-                const existingIndicator = portfolioCard.querySelector('.selected-indicator');
-                if (existingIndicator) {
-                    existingIndicator.remove();
-                }
-            }
-            
-            if (bisnisCard) {
-                bisnisCard.classList.remove('selected-package');
-                const existingIndicator = bisnisCard.querySelector('.selected-indicator');
-                if (existingIndicator) {
-                    existingIndicator.remove();
-                }
-            }
-            
-            // Add highlight to selected package
-            let selectedCard = null;
-            if (packageName.includes('Portfolio')) {
-                selectedCard = portfolioCard;
-            } else if (packageName.includes('Bisnis')) {
-                selectedCard = bisnisCard;
-            }
-            
-            if (selectedCard) {
-                selectedCard.classList.add('selected-package');
-                
-                // Add visual indicator
-                const indicator = document.createElement('div');
-                indicator.className = 'selected-indicator';
-                indicator.innerHTML = '<i class="fas fa-check"></i>';
-                selectedCard.appendChild(indicator);
-                
-                // Add animation
-                selectedCard.style.transform = 'translateY(-8px)';
-                setTimeout(() => {
-                    selectedCard.style.transform = 'translateY(-4px)';
-                }, 300);
-            }
-        }
-        
-        // ============================
-        // INITIALIZE FORM LOGIC
-        // ============================
-        function initFormLogic() {
-            const packageSelect = document.getElementById('jenis-paket');
-            const websiteSelect = document.getElementById('jenis-website');
-            const formStatus = document.getElementById('formStatus');
-            
-            if (!packageSelect || !websiteSelect) return;
-            
-            // Function to update website options
-            function updateWebsiteOptions(selectedPackage) {
-                // Reset dropdown
-                websiteSelect.innerHTML = '';
-                
-                if (!selectedPackage) {
-                    // Jika tidak ada paket yang dipilih
-                    const defaultOption = document.createElement('option');
-                    defaultOption.value = '';
-                    defaultOption.textContent = '-- Pilih Paket Promo terlebih dahulu --';
-                    websiteSelect.appendChild(defaultOption);
-                    websiteSelect.disabled = true;
-                    
-                    // Update status
-                    if (formStatus) {
-                        formStatus.innerHTML = '<i class="fas fa-info-circle status-icon"></i> Pilih paket promo terlebih dahulu untuk melihat opsi jenis website.';
-                        formStatus.className = 'form-status info';
-                        formStatus.style.display = 'block';
-                    }
-                    
-                    return;
-                }
-                
-                // Dapatkan data website untuk paket yang dipilih
-                const packageData = packageWebsiteMapping[selectedPackage];
-                
-                if (!packageData) {
-                    console.error('Data paket tidak ditemukan:', selectedPackage);
-                    return;
-                }
-                
-                // Tambahkan opsi default
-                const defaultOption = document.createElement('option');
-                defaultOption.value = '';
-                defaultOption.textContent = '-- Pilih Jenis Website --';
-                websiteSelect.appendChild(defaultOption);
-                
-                // Tambahkan opsi website
-                packageData.websites.forEach(website => {
-                    const option = document.createElement('option');
-                    option.value = website.value;
-                    option.textContent = website.label;
-                    websiteSelect.appendChild(option);
-                });
-                
-                // Aktifkan dropdown
-                websiteSelect.disabled = false;
-                
-                // Update status
-                if (formStatus) {
-                    formStatus.innerHTML = `<i class="fas fa-check-circle status-icon" style="color: var(--success)"></i> Paket Promo <strong>${selectedPackage}</strong> dipilih. Pilih jenis website 1 halaman yang sesuai.`;
-                    formStatus.className = 'form-status success';
-                    formStatus.style.display = 'block';
-                }
-                
-                // Highlight selected package
-                highlightSelectedPackage(selectedPackage);
-            }
-            
-            // Event listener untuk perubahan paket
-            packageSelect.addEventListener('change', function() {
-                const selectedPackage = this.value;
-                currentSelectedPackage = selectedPackage;
-                updateWebsiteOptions(selectedPackage);
-            });
-            
-            // Initialize
-            updateWebsiteOptions(packageSelect.value);
-        }
-        
-        // ============================
-        // INITIALIZE MOBILE MENU
-        // ============================
+        // Mobile menu
         function initMobileMenu() {
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const navLinks = document.querySelector('.nav-links');
             
-            if (!mobileMenuBtn || !navLinks) return;
-            
-            // Toggle mobile menu
-            mobileMenuBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                
+            mobileMenuBtn.addEventListener('click', function() {
                 navLinks.classList.toggle('active');
-                
-                // Change icon based on menu state
                 const icon = this.querySelector('i');
-                if (navLinks.classList.contains('active')) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times');
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                    document.body.style.overflow = '';
-                }
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
             });
             
-            // Close mobile menu when clicking a link
-            const navLinksItems = document.querySelectorAll('.nav-link');
-            navLinksItems.forEach(link => {
-                link.addEventListener('click', function() {
+            // Close menu on link click
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
                     navLinks.classList.remove('active');
-                    document.body.style.overflow = '';
-                    
-                    // Reset icon
-                    const icon = mobileMenuBtn.querySelector('i');
-                    if (icon) {
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
-                    }
+                    mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                    mobileMenuBtn.querySelector('i').classList.add('fa-bars');
                 });
-            });
-            
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-                    navLinks.classList.remove('active');
-                    document.body.style.overflow = '';
-                    
-                    // Reset icon
-                    const icon = mobileMenuBtn.querySelector('i');
-                    if (icon) {
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
-                    }
-                }
-            });
-            
-            // Close menu on window resize (if resized to desktop)
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    navLinks.classList.remove('active');
-                    document.body.style.overflow = '';
-                    
-                    // Reset icon
-                    const icon = mobileMenuBtn.querySelector('i');
-                    if (icon) {
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
-                    }
-                }
             });
         }
         
-        // ============================
-        // INITIALIZE HEADER EFFECTS
-        // ============================
+        // Header scroll effect
         function initHeaderEffects() {
             const header = document.getElementById('header');
             
-            if (!header) return;
-            
-            // Add scroll effect
             window.addEventListener('scroll', function() {
                 if (window.scrollY > 50) {
                     header.classList.add('scrolled');
                 } else {
                     header.classList.remove('scrolled');
                 }
-            });
-            
-            // Active nav link based on scroll position
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            function updateActiveNavLink() {
-                let current = '';
                 
+                // Active nav link
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                let current = '';
                 sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    
-                    if (window.scrollY >= (sectionTop - 100)) {
+                    const sectionTop = section.offsetTop - 100;
+                    if (window.scrollY >= sectionTop) {
                         current = section.getAttribute('id');
                     }
                 });
@@ -2818,354 +1982,156 @@
                         link.classList.add('active');
                     }
                 });
-            }
-            
-            window.addEventListener('scroll', updateActiveNavLink);
-            updateActiveNavLink(); // Initial call
+            });
         }
         
-        // ============================
-        // INITIALIZE ANIMATIONS
-        // ============================
-        function initAnimations() {
-            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+        // Form logic
+        function initFormLogic() {
+            const packageSelect = document.getElementById('jenis-paket');
+            const websiteSelect = document.getElementById('jenis-website');
+            const formStatus = document.getElementById('formStatus');
             
-            if (!('IntersectionObserver' in window)) {
-                // Fallback for browsers without IntersectionObserver
-                animatedElements.forEach(el => {
-                    el.classList.add('visible');
-                });
-                return;
-            }
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
+            function updateWebsiteOptions(selectedPackage) {
+                websiteSelect.innerHTML = '';
+                
+                if (!selectedPackage) {
+                    websiteSelect.innerHTML = '<option value="">-- Pilih paket terlebih dahulu --</option>';
+                    websiteSelect.disabled = true;
+                    if (formStatus) {
+                        formStatus.innerHTML = '<i class="fas fa-info-circle status-icon"></i> Pilih paket promo terlebih dahulu.';
                     }
+                    return;
+                }
+                
+                const packageData = packageWebsiteMapping[selectedPackage];
+                
+                if (!packageData) return;
+                
+                websiteSelect.innerHTML = '<option value="">-- Pilih Jenis Website --</option>';
+                
+                packageData.websites.forEach(website => {
+                    const option = document.createElement('option');
+                    option.value = website.value;
+                    option.textContent = website.label;
+                    websiteSelect.appendChild(option);
                 });
-            }, {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
+                
+                websiteSelect.disabled = false;
+                
+                if (formStatus) {
+                    formStatus.innerHTML = `<i class="fas fa-check-circle status-icon"></i> Paket <strong>${selectedPackage}</strong> dipilih.`;
+                }
+            }
+            
+            packageSelect.addEventListener('change', function() {
+                updateWebsiteOptions(this.value);
             });
             
-            animatedElements.forEach(el => {
-                observer.observe(el);
-            });
+            updateWebsiteOptions(packageSelect.value);
         }
         
-        // ============================
-        // INITIALIZE FORM SUBMISSION
-        // ============================
+        // Form submission
         function initFormSubmission() {
-            const orderFormElement = document.querySelector('form#orderForm');
+            const orderForm = document.getElementById('orderForm');
             
-            if (!orderFormElement) return;
-            
-            orderFormElement.addEventListener('submit', function(e) {
+            orderForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 
-                // Get form values
                 const nama = document.getElementById('nama').value.trim();
                 const whatsapp = document.getElementById('whatsapp').value.trim();
                 const paket = document.getElementById('jenis-paket').value;
                 const jenisWebsite = document.getElementById('jenis-website').value;
                 const pesan = document.getElementById('pesan').value.trim();
                 
-                // Validate form
                 if (!nama || !whatsapp || !paket || !jenisWebsite) {
-                    showNotification('Harap isi semua field yang wajib diisi!', 'error');
+                    alert('Harap isi semua field yang wajib diisi!');
                     return;
                 }
                 
-                // Validate WhatsApp number
-                const whatsappRegex = /^[0-9\-\+\s\(\)]{10,}$/;
-                if (!whatsappRegex.test(whatsapp)) {
-                    showNotification('Nomor WhatsApp tidak valid!', 'error');
-                    return;
-                }
-                
-                // Format WhatsApp number (remove non-digits)
                 const cleanWhatsApp = whatsapp.replace(/\D/g, '');
                 
-                // Prepare message
-                let whatsappMessage = `Halo, saya mau pesan website promo di WebSipp.\n\n`;
-                whatsappMessage += `*DATA PEMESANAN PROMO:*\n`;
-                whatsappMessage += `👤 Nama: ${nama}\n`;
-                whatsappMessage += `📱 WhatsApp: ${whatsapp}\n`;
-                whatsappMessage += `🔥 Paket Promo: ${paket}\n`;
-                whatsappMessage += `🌐 Jenis Website: ${jenisWebsite}\n`;
-                whatsappMessage += `📝 Keterangan: Website 1 halaman statis dengan template pilihan\n`;
+                let message = `Halo, saya mau pesan website promo di WebSipp.\n\n`;
+                message += `*DATA PEMESANAN:*\n`;
+                message += `👤 Nama: ${nama}\n`;
+                message += `📱 WhatsApp: ${whatsapp}\n`;
+                message += `🔥 Paket: ${paket}\n`;
+                message += `🌐 Jenis Website: ${jenisWebsite}\n`;
                 
                 if (pesan) {
-                    whatsappMessage += `\n*INFORMASI TAMBAHAN:*\n${pesan}\n`;
+                    message += `\n*INFO TAMBAHAN:*\n${pesan}\n`;
                 }
                 
-                whatsappMessage += `\n_Saya memahami bahwa ini adalah harga promo perdana untuk validasi pasar._\n_Silahkan konfirmasi ketersediaan slot promo._`;
+                message += `\n_Silahkan konfirmasi ketersediaan slot promo._`;
                 
-                // Encode message for URL
-                const encodedMessage = encodeURIComponent(whatsappMessage);
-                
-                // Create WhatsApp URL
-                const whatsappURL = `https://wa.me/6289526382162?text=${encodedMessage}`;
-                
-                // Open WhatsApp
+                const whatsappURL = `https://wa.me/6289526382162?text=${encodeURIComponent(message)}`;
                 window.open(whatsappURL, '_blank');
-                
-                // Show success notification
-                showNotification('Pesanan promo berhasil dikirim! Mengarahkan ke WhatsApp...', 'success');
                 
                 // Reset form
                 setTimeout(() => {
-                    orderFormElement.reset();
-                    
-                    // Reset package selection
-                    const websiteSelect = document.getElementById('jenis-website');
-                    if (websiteSelect) {
-                        websiteSelect.innerHTML = '<option value="">-- Pilih Paket Promo terlebih dahulu --</option>';
-                        websiteSelect.disabled = true;
-                    }
-                    
-                    // Reset form status
-                    const formStatus = document.getElementById('formStatus');
-                    if (formStatus) {
-                        formStatus.innerHTML = '<i class="fas fa-info-circle status-icon"></i> Pilih paket promo terlebih dahulu untuk melihat opsi jenis website.';
-                        formStatus.className = 'form-status info';
-                    }
-                    
-                    // Remove selected package highlights
-                    const portfolioCard = document.getElementById('packagePortfolio');
-                    const bisnisCard = document.getElementById('packageBisnis');
-                    
-                    [portfolioCard, bisnisCard].forEach(card => {
-                        if (card) {
-                            card.classList.remove('selected-package');
-                            const indicator = card.querySelector('.selected-indicator');
-                            if (indicator) {
-                                indicator.remove();
-                            }
-                        }
-                    });
-                    
-                    currentSelectedPackage = null;
-                }, 1500);
+                    orderForm.reset();
+                    document.getElementById('jenis-website').innerHTML = '<option value="">-- Pilih paket terlebih dahulu --</option>';
+                    document.getElementById('jenis-website').disabled = true;
+                    document.getElementById('formStatus').innerHTML = '<i class="fas fa-info-circle status-icon"></i> Pilih paket promo terlebih dahulu.';
+                }, 1000);
             });
         }
         
-        // ============================
-        // INITIALIZE PRICE ANIMATIONS
-        // ============================
-        function initPriceAnimations() {
-            const limitedBadges = document.querySelectorAll('.limited-spot-badge');
+        // Select package function
+        function selectPackage(packageName) {
+            const packageSelect = document.getElementById('jenis-paket');
+            packageSelect.value = packageName;
             
-            if (!limitedBadges.length) return;
+            const event = new Event('change');
+            packageSelect.dispatchEvent(event);
             
-            // Add pulsing animation to limited spot badges
-            limitedBadges.forEach(badge => {
-                // Start pulsing animation
-                setInterval(() => {
-                    badge.style.animation = 'pulse 1s ease-in-out';
-                    
-                    // Reset animation after it completes
-                    setTimeout(() => {
-                        badge.style.animation = '';
-                    }, 1000);
-                }, 3000);
-            });
-        }
-        
-        // ============================
-        // SHOW NOTIFICATION FUNCTION
-        // ============================
-        function showNotification(message, type = 'info') {
-            // Remove existing notifications
-            const existingNotifications = document.querySelectorAll('.notification');
-            existingNotifications.forEach(notification => {
-                notification.remove();
-            });
-            
-            // Create notification element
-            const notification = document.createElement('div');
-            notification.className = `notification ${type}`;
-            
-            // Create content
-            notification.innerHTML = `
-                <div class="notification-content">
-                    <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
-                    <span>${message}</span>
-                </div>
-            `;
-            
-            // Add to body
-            document.body.appendChild(notification);
-            
-            // Auto remove after 5 seconds
+            // Scroll to form
             setTimeout(() => {
-                if (notification.parentNode) {
-                    notification.remove();
-                }
-            }, 5000);
+                document.getElementById('orderFormContainer').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 300);
+        }
+        
+        // Scroll to form
+        function scrollToForm() {
+            document.getElementById('pricing').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            return false;
+        }
+        
+        // Animations
+        function initAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, { threshold: 0.1 });
             
-            // Also remove on click
-            notification.addEventListener('click', function() {
-                this.remove();
+            document.querySelectorAll('.card').forEach(card => {
+                observer.observe(card);
             });
         }
         
-        // ============================
-        // SMOOTH SCROLL FOR ANCHOR LINKS
-        // ============================
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href');
+                const href = this.getAttribute('href');
+                if (href === '#') return;
                 
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
+                const target = document.querySelector(href);
+                if (target) {
                     e.preventDefault();
-                    
-                    // Close mobile menu if open
-                    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-                    const navLinks = document.querySelector('.nav-links');
-                    const body = document.body;
-                    
-                    if (navLinks && navLinks.classList.contains('active')) {
-                        navLinks.classList.remove('active');
-                        body.style.overflow = '';
-                        
-                        // Reset icon
-                        const icon = mobileMenuBtn.querySelector('i');
-                        if (icon) {
-                            icon.classList.remove('fa-times');
-                            icon.classList.add('fa-bars');
-                        }
-                    }
-                    
-                    // Smooth scroll
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
                     });
                 }
             });
-        });
-        
-        // ============================
-        // ENHANCE FORM VALIDATION
-        // ============================
-        function enhanceFormValidation() {
-            const whatsappInput = document.getElementById('whatsapp');
-            
-            if (whatsappInput) {
-                // Format WhatsApp number as user types
-                whatsappInput.addEventListener('input', function(e) {
-                    let value = e.target.value.replace(/\D/g, '');
-                    
-                    // Format: 0895 2638 2162
-                    if (value.length > 4) {
-                        value = value.substring(0, 4) + ' ' + value.substring(4);
-                    }
-                    if (value.length > 9) {
-                        value = value.substring(0, 9) + ' ' + value.substring(9);
-                    }
-                    if (value.length > 14) {
-                        value = value.substring(0, 14);
-                    }
-                    
-                    e.target.value = value;
-                });
-                
-                // Prevent zoom on focus in iOS
-                whatsappInput.addEventListener('touchstart', function() {
-                    this.style.fontSize = '16px';
-                });
-            }
-        }
-        
-        // ============================
-        // ENHANCE USER EXPERIENCE
-        // ============================
-        function enhanceUX() {
-            // Add hover effects to cards
-            const cards = document.querySelectorAll('.card');
-            
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    if (window.innerWidth > 768) {
-                        this.style.transform = 'translateY(-8px)';
-                        this.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
-                    }
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    if (window.innerWidth > 768) {
-                        this.style.transform = 'translateY(0)';
-                    }
-                });
-            });
-            
-            // Add click effect to buttons
-            const buttons = document.querySelectorAll('.btn');
-            
-            buttons.forEach(button => {
-                button.addEventListener('mousedown', function() {
-                    this.style.transform = 'scale(0.98)';
-                });
-                
-                button.addEventListener('mouseup', function() {
-                    this.style.transform = '';
-                });
-                
-                button.addEventListener('mouseleave', function() {
-                    this.style.transform = '';
-                });
-            });
-            
-            // Prevent horizontal scroll on mobile
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 0) {
-                    document.body.style.overflowX = 'hidden';
-                }
-            });
-        }
-        
-        // ============================
-        // WINDOW LOAD EVENT
-        // ============================
-        window.addEventListener('load', function() {
-            // Update copyright year
-            const yearElement = document.querySelector('.footer-bottom p');
-            if (yearElement) {
-                const currentYear = new Date().getFullYear();
-                yearElement.innerHTML = yearElement.innerHTML.replace('2025', currentYear);
-            }
-            
-            // Remove loading class
-            document.body.classList.remove('loading');
-            document.body.classList.add('loaded');
-            
-            // Log page load
-            console.log('WebSipp landing page fully loaded!');
-        });
-        
-        // ============================
-        // ERROR HANDLING
-        // ============================
-        window.addEventListener('error', function(e) {
-            console.error('Error occurred:', e.error);
-        });
-        
-        // ============================
-        // OFFLINE DETECTION
-        // ============================
-        window.addEventListener('offline', function() {
-            showNotification('Anda sedang offline. Beberapa fitur mungkin tidak berfungsi.', 'error');
-        });
-        
-        window.addEventListener('online', function() {
-            showNotification('Koneksi internet telah pulih.', 'success');
         });
     </script>
 </body>
